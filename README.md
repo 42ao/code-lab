@@ -11,3 +11,13 @@ The code in this repository should be self-explanatory and is designed to be dir
 * [Bash](./bash/bash.md)
 * [Python](./python/python.md)
 
+## Tools
+
+The language specific tools can be installed via
+```sh
+./setup_tools.sh [all|bash|python]
+```
+or remove via
+```sh
+./remove_tools.sh [all|bash|python]
+```
