@@ -50,3 +50,23 @@ bash -c "${BASH_SOURCE%/*}/hello_world.sh yourself"
 print_title "with multiple arguments"
 print_code <<<'bash -c "${BASH_SOURCE%/*}/hello_world.sh first and last name"'
 bash -c "${BASH_SOURCE%/*}/hello_world.sh first and last name"
+
+print_section "execute script via loading"
+print_code <<<'. ./SCRIPT.sh [ARGS]'
+
+print_note "Loads and executes everything from SCRIPT.sh"
+
+print_title "without arguments"
+print_code <<<'. "${BASH_SOURCE%/*}/hello_world.sh"'
+. "${BASH_SOURCE%/*}/hello_world.sh"
+print_note "greeting: ${greeting}"
+
+print_title "with one argument"
+print_code <<<'. "${BASH_SOURCE%/*}/hello_world.sh" "yourself"'
+. "${BASH_SOURCE%/*}/hello_world.sh" "yourself"
+print_note "greeting: ${greeting}"
+
+print_title "with multiple arguments"
+print_code <<<'. "${BASH_SOURCE%/*}/hello_world.sh" first and last name'
+. "${BASH_SOURCE%/*}/hello_world.sh" first and last name
+print_note "greeting: ${greeting}"
