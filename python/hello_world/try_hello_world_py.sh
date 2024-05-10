@@ -24,7 +24,7 @@ print_code <<<'"${BASH_SOURCE%/*}"/hello_world.py first and last name'
 "${BASH_SOURCE%/*}"/hello_world.py first and last name
 
 print_section "execute script via command line interpreter"
-print_code <<<"${python} SCRIPT.py"
+print_code <<<"${python} ./SCRIPT.py"
 
 print_title "without arguments"
 print_code <<<"${python} \"${BASH_SOURCE%/*}\"/hello_world.py"
@@ -40,6 +40,8 @@ ${python} "${BASH_SOURCE%/*}"/hello_world.py first and last name
 
 print_section "execute module via command line interpreter"
 print_code <<<"${python} -m MODULE [ARGS]"
+
+print_note "Only works from within the module directory"
 
 print_title "without arguments"
 print_code <<<"${python} -m hello_world"
