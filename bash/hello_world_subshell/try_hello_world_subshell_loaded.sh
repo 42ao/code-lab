@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# shellcheck disable=SC2119,2016,2031
+# shellcheck disable=SC2119,SC2016,SC2031
 
 . "${BASH_SOURCE%/*}"/../format/format.sh
 
