@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2119
 
-. "${BASH_SOURCE%/*}"/../colorize/colorize.sh
+. "${BASH_SOURCE%/*}"/ansi.sh
 
 COLOR_SECTION=${COLOR_SECTION:-GREEN}
 COLOR_TITLE=${COLOR_TITLE:-BRIGHT_GREEN}
@@ -36,35 +36,35 @@ padded() {
 print_section() {
 	local section=$1
 	echo
-	bold "$(colorize "${COLOR_SECTION}" "$(padded "${section^^}")")"
+	bold "$(format "${COLOR_SECTION}" "$(padded "${section^^}")")"
 }
 
 print_title() {
 	local title=$1
 	echo
-	colorize "${COLOR_TITLE}" "${title}"
+	format "${COLOR_TITLE}" "${title}"
 }
 
 # shellcheck disable=SC2120,SC2086
 print_code() {
 	local code
 	code=$(cat $1)
-	colorize "${COLOR_CODE}" "${code}"
+	format "${COLOR_CODE}" "${code}"
 }
 
 print_note() {
 	local note=$1
-	colorize "${COLOR_NOTE}" "NOTE ${note}"
+	format "${COLOR_NOTE}" "NOTE ${note}"
 }
 
 print_bof() {
 	local file_name=$1
-	colorize "${COLOR_FILE}" "$(padded "BOF ${file_name}" "\`")"
+	format "${COLOR_FILE}" "$(padded "BOF ${file_name}" "\`")"
 }
 
 print_eof() {
 	local file_name=$1
-	colorize "${COLOR_FILE}" "$(padded "EOF ${file_name}" "\`")"
+	format "${COLOR_FILE}" "$(padded "EOF ${file_name}" "\`")"
 }
 
 print_source() {

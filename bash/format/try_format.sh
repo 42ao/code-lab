@@ -6,6 +6,8 @@
 
 print_source "${BASH_SOURCE%/*}"/format.sh
 
+COLOR_TITLE="BRIGHT_RED"
+
 print_title "Padded with default padding character"
 print_code <<<'padded "This string is padded until ${PADDING_WIDTH} characters"'
 padded "This string is padded until ${PADDING_WIDTH} characters"

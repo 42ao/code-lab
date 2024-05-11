@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2086,SC2155
 
-. "${BASH_SOURCE%/*}"/ansi.sh
+. "${BASH_SOURCE%/*}"/../format/ansi.sh
 
 colorize() {
 	local color=${1^^}
