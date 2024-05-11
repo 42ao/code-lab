@@ -71,6 +71,6 @@ print_source() {
 	local source=$1
 	print_title "SOURCE"
 	print_bof "${source}"
-	print_code < "${source}"
+	print_code <"${source}"
 	print_eof "${source}"
 }

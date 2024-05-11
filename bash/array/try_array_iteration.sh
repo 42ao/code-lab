@@ -51,4 +51,3 @@ for element in "${array[*]}"; do
 	echo "${element}"
 done
 print_note '"${array[*]}" with double quotes concatenates the array to a string and the loop only runs once.'
-

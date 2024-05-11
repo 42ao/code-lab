@@ -25,7 +25,7 @@ for element in "${array[@]}"; do
 	colorize "${color}" "${element}"
 done
 
-print_title "Colorize array elements with '@'" 
+print_title "Colorize array elements with '@'"
 print_code <<<'colorize "${color}" "${array[@]}"'
 colorize "${color}" "${array[@]}"
 

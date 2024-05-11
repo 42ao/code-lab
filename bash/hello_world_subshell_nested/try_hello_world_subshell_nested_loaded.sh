@@ -17,7 +17,7 @@ subshell "$@"
 print_title "Try to execute hello_world function defined within the subshell"
 print_code <<<'hello_world "$@"'
 hello_world "$@"
-print_note  "This does not work as the hello_world function is defined within a subshell"
+print_note "This does not work as the hello_world function is defined within a subshell"
 
 print_title "Variables"
 echo "Global var        : ${global_var}"
