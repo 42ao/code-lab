@@ -1,20 +1,7 @@
 #!/bin/bash
 
 . "${BASH_SOURCE%/*}"/bash_tools.sh
-. "${BASH_SOURCE%/*}"/../snap/install_snap.sh
-. "${BASH_SOURCE%/*}"/../snap/snap_installed.sh
-
-remove_snap_packages() {
-  local packages=("$@")
-  for package in "${packages[@]}"; do
-    if ! snap_installed "${package}"; then
-      echo "${package} is not installed."
-    else
-      echo "Removing ${package}..."
-      sudo snap remove "${package}"
-    fi
-  done
-}
+. "${BASH_SOURCE%/*}"/../snap/remove_snap_packages.sh
 
 remove_bash_tools_on_ubuntu() {
   remove_snap_packages "${SNAP_PACKAGES[@]}"

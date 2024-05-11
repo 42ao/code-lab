@@ -2,19 +2,7 @@
 
 . "${BASH_SOURCE%/*}"/bash_tools.sh
 . "${BASH_SOURCE%/*}"/../snap/install_snap.sh
-. "${BASH_SOURCE%/*}"/../snap/snap_installed.sh
-
-install_snap_packages() {
-  local packages=("$@")
-  for package in "${packages[@]}"; do
-    if snap_installed "${package}"; then
-      echo "${package} is already installed."
-    else
-      echo "Installing ${package}..."
-      sudo snap install "${package}"
-    fi
-  done
-}
+. "${BASH_SOURCE%/*}"/../snap/install_snap_packages.sh
 
 setup_bash_tools_on_ubuntu() {
   install_snap_via_apt
