@@ -4,7 +4,7 @@
 . "${BASH_SOURCE%/*}"/../snap/remove_snap_packages.sh
 
 remove_bash_tools_on_ubuntu() {
-  remove_snap_packages "${SNAP_PACKAGES[@]}"
+  remove_snap_packages "${BASH_SNAP_PACKAGES[@]}"
 }
 
 remove_bash_tools() {

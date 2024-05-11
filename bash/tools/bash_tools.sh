@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 
-SNAP_PACKAGES=(
+BASH_SNAP_PACKAGES=(
   "shellcheck"
   "shfmt"
 )

@@ -6,7 +6,7 @@
 
 setup_bash_tools_on_ubuntu() {
   install_snap_via_apt
-  install_snap_packages "${SNAP_PACKAGES[@]}"
+  install_snap_packages "${BASH_SNAP_PACKAGES[@]}"
 }
 
 setup_bash_tools() {
