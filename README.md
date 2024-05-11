@@ -1,4 +1,4 @@
-# Code Lab
+# Arno's Code Lab
 
 Welcome to my personal code lab! This is where I experiment with code in various programming languages, as I find that hands-on coding is the best way for me to learn.
 
@@ -8,16 +8,17 @@ The code in this repository should be self-explanatory and is designed to be dir
 
 ## Available languages
 
+* [Development - language agnostic](./dev/dev.md)
 * [Bash](./bash/bash.md)
 * [Python](./python/python.md)
 
 ## Tools
 
-The language specific tools can be installed via
+Helpful development tools can be installed via
 ```sh
-./setup_tools.sh [all|bash|python]
+./setup_tools.sh [all|dev|bash|python]
 ```
 or remove via
 ```sh
-./remove_tools.sh [all|bash|python]
+./remove_tools.sh [all|dev|bash|python]
 ```
