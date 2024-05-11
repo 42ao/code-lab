@@ -2,10 +2,11 @@
 
 . "${BASH_SOURCE%/*}"/bash/os/get_os.sh
 . "${BASH_SOURCE%/*}"/bash/tools/setup_bash_tools.sh
+. "${BASH_SOURCE%/*}"/dev/tools/setup_dev_tools.sh
 . "${BASH_SOURCE%/*}"/python/tools/setup_python_tools.sh
 
 print_usage() {
-  echo "Usage: ${BASH_SOURCE[0]} [all|bash|python]"
+  echo "Usage: ${BASH_SOURCE[0]} [all|dev|bash|python]"
 }
 
 setup_tools() {
@@ -21,8 +22,12 @@ setup_tools() {
 
   case "$1" in
   all)
+    setup_dev_tools "${os}"
     setup_bash_tools "${os}"
     setup_python_tools "${os}"
+    ;;
+  dev)
+    setup_dev_tools "${os}"
     ;;
   bash)
     setup_bash_tools "${os}"

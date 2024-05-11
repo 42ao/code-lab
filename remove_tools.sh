@@ -2,10 +2,11 @@
 
 . "${BASH_SOURCE%/*}"/bash/os/get_os.sh
 . "${BASH_SOURCE%/*}"/bash/tools/remove_bash_tools.sh
+. "${BASH_SOURCE%/*}"/dev/tools/remove_dev_tools.sh
 . "${BASH_SOURCE%/*}"/python/tools/remove_python_tools.sh
 
 print_usage() {
-  echo "Usage: ${BASH_SOURCE[0]} [all|bash|python]"
+  echo "Usage: ${BASH_SOURCE[0]} [all|dev|bash|python]"
 }
 
 remove_tools() {
@@ -21,8 +22,12 @@ remove_tools() {
 
   case "$1" in
   all)
+    remove_dev_tools "${os}"
     remove_bash_tools "${os}"
     remove_python_tools "${os}"
+    ;;
+  dev)
+    remove_dev_tools "${os}"
     ;;
   bash)
     remove_bash_tools "${os}"
