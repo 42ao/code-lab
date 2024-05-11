@@ -23,7 +23,7 @@ remove_pip_packages() {
 }
 
 remove_python_tools_on_ubuntu() {
-  remove_pip_packages "${PIP_PACKAGES[@]}"
+  remove_pip_packages "${PYTHON_PIP_PACKAGES[@]}"
 }
 
 remove_python_tools() {

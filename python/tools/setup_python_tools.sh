@@ -23,7 +23,7 @@ install_pip_packages() {
 }
 
 setup_python_tools_on_ubuntu() {
-  install_pip_packages "${PIP_PACKAGES[@]}"
+  install_pip_packages "${PYTHON_PIP_PACKAGES[@]}"
 }
 
 setup_python_tools() {

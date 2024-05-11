@@ -2,6 +2,6 @@
 
 # shellcheck disable=SC2034
 
-PIP_PACKAGES=(
+PYTHON_PIP_PACKAGES=(
   "ruff"
 )
