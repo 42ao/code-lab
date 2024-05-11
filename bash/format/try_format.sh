@@ -6,6 +6,8 @@
 
 print_source "${BASH_SOURCE%/*}"/format.sh
 
+print_title "Set title color env var"
+print_code <<<'COLOR_TITLE="BRIGHT_RED"'
 COLOR_TITLE="BRIGHT_RED"
 
 print_title "Padded with default padding character"
