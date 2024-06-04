@@ -5,3 +5,12 @@ __pycache__/
 
 # Distribution / packaging
 *.egg-info/
+
+# Tests
+.pytest_cache/
+
+# ruff
+.ruff_cache/
+
+# Environments
+.venv/
