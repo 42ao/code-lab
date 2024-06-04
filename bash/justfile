@@ -1,0 +1,24 @@
+alias l := lint
+alias f := format
+
+shell_files := "find . -type f -name '*.sh' -not -path '*/_FIX_*' -not -path '*/_TODO_*'"
+
+# show all recipies
+help:
+    just --unsorted --list
+
+# setup development tools
+setup:
+    ../setup_tools.sh bash
+
+# lint shell files
+lint:
+    {{ shell_files }} -execdir shellcheck -x {} +
+
+# check formatting of shell files
+format_check:
+    {{ shell_files }} | xargs shfmt -d
+
+# format shell files
+format:
+    {{ shell_files }} | xargs shfmt -l -w
