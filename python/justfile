@@ -1,0 +1,79 @@
+alias l := lint
+alias f := format
+alias b := build
+alias c := clean
+
+package := "code-lab-python"
+
+system_pip := "pip3"
+system_python := "python3"
+
+venv_dir := ".venv"
+pip := venv_dir + "/bin/pip"
+python := venv_dir + "/bin/python"
+
+# show all recipies
+help:
+    just --unsorted --list
+
+# setup everything
+setup: wipe setup_dev setup_venv setup_package
+
+# install development tools
+setup_dev:
+    @echo "Install python tools in system Python"
+    ../setup_tools.sh python
+
+    @echo "Install development requirements in system Python"
+    {{ system_pip }} install --user -r ./requirements-dev.txt
+
+# setup virtual environment
+setup_venv:
+    [ -d {{ venv_dir }} ] || echo "Setup venv"; {{ system_python }} -m venv {{ venv_dir }}
+
+# install package
+setup_package:
+    @echo "Install package {{package}}"
+    {{ pip }} install --editable .
+
+# lint Python files
+lint:
+    ruff check
+
+# format Python files
+format:
+    ruff format
+
+# build package
+build:
+    {{ python }} -m build
+
+# wipe everything
+wipe: clean clean_venv
+
+# remove all artifacts
+clean: clean_build clean_caches
+
+# remove build artifacts
+clean_build:
+    @echo "Remove dist directory"
+    find . -type d -name dist -exec rm -rf {} +
+
+    @echo "Remove *.egg-info directories"
+    find . -type d -name *.egg-info -exec rm -rf {} +
+
+# remove cache artifacts
+clean_caches:
+    @echo "Remove python caches"
+    find . -type d -name __pycache__ -exec rm -rf {} +
+
+    @echo "Remove pytest caches"
+    find . -type d -name .pytest_cache -exec rm -rf {} +
+
+    @echo "Remove ruff caches"
+    ruff clean
+
+# remove virtual environment
+clean_venv:
+    @echo "Remove virtual environment"
+    rm -rf {{ venv_dir }}
