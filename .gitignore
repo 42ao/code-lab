@@ -1,2 +1,5 @@
 _FIX_*
 _TODO_*
+
+# Python
+.pytest_cache
