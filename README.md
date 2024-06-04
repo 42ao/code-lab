@@ -22,3 +22,4 @@ or remove via
 ```sh
 ./remove_tools.sh [all|dev|bash|python]
 ```
+NOTE: At the moment, only Ubuntu is supported by these scripts.
