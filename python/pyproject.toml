@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-lab-python"
+authors = [{ name = "Arno Becker", email = "42ao@posteo.net" }]
+description = "Arno's code lab for Python. This project should only enable relative imports between the modules within this folder."
+license = { text = "MIT" }
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3',
+]
+dependencies = []
+version = "0.0.1"
+
+[project.urls]
+Repository = "https://github.com/42ao/code-lab/python"
+
+[tool.setuptools.packages.find]
+where = [""]
+include = [
+    "format"
+]
+exclude = []
+namespaces = false
