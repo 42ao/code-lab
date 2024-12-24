@@ -3,25 +3,7 @@
 . "${BASH_SOURCE%/*}"/python_tools.sh
 . "${BASH_SOURCE%/*}"/../../bash/os/get_os.sh
 . "${BASH_SOURCE%/*}"/../../bash/brew/remove_brew_packages.sh
-
-pip="pip3"
-
-pip_package_installed() {
-  local package=$1
-  ${pip} show "${package}" &>/dev/null
-}
-
-remove_pip_packages() {
-  local packages=("$@")
-  for package in "${packages[@]}"; do
-    if ! pip_package_installed "${package}"; then
-      echo "${package} is not installed."
-    else
-      echo "Removing ${package}..."
-      ${pip} uninstall -y "${package}"
-    fi
-  done
-}
+. "${BASH_SOURCE%/*}"/../../bash/pip/remove_pip_packages.sh
 
 remove_python_tools_on_macos() {
   remove_brew_packages "${PYTHON_BREW_PACKAGES[@]}"
