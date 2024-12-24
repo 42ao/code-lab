@@ -1,9 +1,9 @@
 #!/bin/bash
 
-. "${BASH_SOURCE%/*}"/bash/os/get_os.sh
-. "${BASH_SOURCE%/*}"/bash/tools/remove_bash_tools.sh
-. "${BASH_SOURCE%/*}"/dev/tools/remove_dev_tools.sh
-. "${BASH_SOURCE%/*}"/python/tools/remove_python_tools.sh
+. "${BASH_SOURCE%/*}"/../os/get_os.sh
+. "${BASH_SOURCE%/*}"/remove_bash_tools.sh
+. "${BASH_SOURCE%/*}"/../../dev/tools/remove_dev_tools.sh
+. "${BASH_SOURCE%/*}"/../../python/tools/remove_python_tools.sh
 
 print_usage() {
   echo "Usage: ${BASH_SOURCE[0]} [all|dev|bash|python]"

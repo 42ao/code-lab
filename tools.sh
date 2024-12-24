@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. "${BASH_SOURCE%/*}"/setup_tools.sh
-. "${BASH_SOURCE%/*}"/remove_tools.sh
+. "${BASH_SOURCE%/*}"/bash/tools/setup_tools.sh
+. "${BASH_SOURCE%/*}"/bash/tools/remove_tools.sh
 
 print_usage() {
   echo "Usage: ${BASH_SOURCE[0]} <command> <profile>"

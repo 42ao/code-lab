@@ -16,10 +16,10 @@ The code in this repository should be self-explanatory and is designed to be dir
 
 Helpful development tools can be installed via
 ```sh
-./setup_tools.sh [all|dev|bash|python]
+./tools.sh setup [all|dev|bash|python]
 ```
 or remove via
 ```sh
-./remove_tools.sh [all|dev|bash|python]
+./tools.sh remove [all|dev|bash|python]
 ```
-NOTE: At the moment, only Ubuntu is supported by these scripts.
+Supported operating systems are Ubuntu and MacOS.
