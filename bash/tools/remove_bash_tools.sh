@@ -2,6 +2,11 @@
 
 . "${BASH_SOURCE%/*}"/bash_tools.sh
 . "${BASH_SOURCE%/*}"/../snap/remove_snap_packages.sh
+. "${BASH_SOURCE%/*}"/../brew/remove_brew_packages.sh
+
+remove_bash_tools_on_macos() {
+	remove_brew_packages "${BASH_BREW_PACKAGES[@]}"
+}
 
 remove_bash_tools_on_ubuntu() {
 	remove_snap_packages "${BASH_SNAP_PACKAGES[@]}"
@@ -11,6 +16,9 @@ remove_bash_tools() {
 	local os=$1
 	echo "Remove bash tools"
 	case "${os}" in
+	macOS)
+		remove_bash_tools_on_macos
+		;;	
 	ubuntu)
 		remove_bash_tools_on_ubuntu
 		;;
