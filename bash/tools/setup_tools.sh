@@ -10,7 +10,9 @@ print_usage() {
 }
 
 setup_tools() {
-  if [[ $# -ne 1 ]]; then
+  local profile=${1:-all}
+
+  if [[ $# -ge 2 ]]; then
     print_usage
     exit 1
   fi
@@ -20,7 +22,7 @@ setup_tools() {
     exit 1
   fi
 
-  case "$1" in
+  case "${profile}" in
   all)
     setup_dev_tools "${os}"
     setup_bash_tools "${os}"
