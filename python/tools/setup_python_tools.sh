@@ -1,9 +1,9 @@
 #!/bin/bash
 
 . "${BASH_SOURCE%/*}"/python_tools.sh
-. "${BASH_SOURCE%/*}"/install_pip_packages.sh
-. "${BASH_SOURCE%/*}"/../../bash/os/get_os.sh
 . "${BASH_SOURCE%/*}"/../../bash/brew/install_brew_packages.sh
+. "${BASH_SOURCE%/*}"/../../bash/os/get_os.sh
+. "${BASH_SOURCE%/*}"/../../bash/pip/install_pip_packages.sh
 
 setup_python_tools_on_macos() {
   install_brew_packages "${PYTHON_BREW_PACKAGES[@]}"
