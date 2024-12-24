@@ -5,3 +5,7 @@
 PYTHON_PIP_PACKAGES=(
   "ruff"
 )
+
+PYTHON_BREW_PACKAGES=(
+  "ruff"
+)

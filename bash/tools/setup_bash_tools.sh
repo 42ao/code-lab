@@ -3,6 +3,11 @@
 . "${BASH_SOURCE%/*}"/bash_tools.sh
 . "${BASH_SOURCE%/*}"/../snap/install_snap.sh
 . "${BASH_SOURCE%/*}"/../snap/install_snap_packages.sh
+. "${BASH_SOURCE%/*}"/../brew/install_brew_packages.sh
+
+setup_bash_tools_on_macos() {
+	install_brew_packages "${BASH_BREW_PACKAGES[@]}"
+}
 
 setup_bash_tools_on_ubuntu() {
 	install_snap_via_apt
@@ -13,6 +18,9 @@ setup_bash_tools() {
 	local os=$1
 	echo "Setup bash tools"
 	case "${os}" in
+	macOS)
+		setup_bash_tools_on_macos
+		;;
 	ubuntu)
 		setup_bash_tools_on_ubuntu
 		;;
