@@ -3,10 +3,11 @@
 . "${BASH_SOURCE%/*}"/bash/tools/setup_tools.sh
 . "${BASH_SOURCE%/*}"/bash/tools/remove_tools.sh
 . "${BASH_SOURCE%/*}"/bash/tools/list_tools.sh
+. "${BASH_SOURCE%/*}"/bash/tools/status_tools.sh
 
 print_usage() {
   echo "Usage: ${BASH_SOURCE[0]} <command> <profile>"
-  echo "Usage: ${BASH_SOURCE[0]} [setup|remove|list] [all|bash|dev|python]"
+  echo "Usage: ${BASH_SOURCE[0]} [setup|remove|list|status] [all|bash|dev|python]"
 }
 
 tools() {
@@ -27,6 +28,9 @@ tools() {
     ;;
   list)
     list_tools "${profile}"
+    ;;
+  status)
+    status_tools "${profile}"
     ;;
   *)
     print_usage
