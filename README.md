@@ -18,8 +18,16 @@ Helpful development tools can be installed via
 ```sh
 ./tools.sh setup [all|dev|bash|python]
 ```
-or remove via
+removed via
 ```sh
 ./tools.sh remove [all|dev|bash|python]
+```
+listed via
+```sh
+./tools.sh list [all|dev|bash|python]
+```
+or listed with its installation status via
+```sh
+./tools.sh status [all|dev|bash|python]
 ```
 Supported operating systems are Ubuntu and MacOS.
