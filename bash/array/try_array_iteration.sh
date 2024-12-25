@@ -15,7 +15,7 @@ for element in "${array[@]}"; do
 done
 EOF
 for element in "${array[@]}"; do
-	echo "${element}"
+    echo "${element}"
 done
 
 print_title "Iterate array via indices"
@@ -25,7 +25,7 @@ for index in "${!array[@]}"; do
 done
 EOF
 for index in "${!array[@]}"; do
-	echo "${index}": "${array[${index}]}"
+    echo "${index}": "${array[${index}]}"
 done
 
 print_title "Iterate array via '*' without \""
@@ -36,7 +36,7 @@ done
 EOF
 # shellcheck disable=SC2048
 for element in ${array[*]}; do
-	echo "${element}"
+    echo "${element}"
 done
 print_note '${array[*]} without quotes splits the elements at whitespaces or words.'
 
@@ -48,6 +48,6 @@ done
 EOF
 # shellcheck disable=SC2066
 for element in "${array[*]}"; do
-	echo "${element}"
+    echo "${element}"
 done
 print_note '"${array[*]}" with double quotes concatenates the array to a string and the loop only runs once.'

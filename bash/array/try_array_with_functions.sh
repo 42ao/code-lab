@@ -19,10 +19,10 @@ function print_array {
 print_array "${array[@]}"
 EOF
 function print_array {
-	local array=("$@")
-	for element in "${array[@]}"; do
-		echo "${element}"
-	done
+    local array=("$@")
+    for element in "${array[@]}"; do
+        echo "${element}"
+    done
 }
 print_array "${array[@]}"
 
@@ -37,10 +37,10 @@ function print_array_ref {
 print_array_ref array
 EOF
 function print_array_ref {
-	local -n a=$1
-	for element in "${a[@]}"; do
-		echo "${element}"
-	done
+    local -n a=$1
+    for element in "${a[@]}"; do
+        echo "${element}"
+    done
 }
 print_array_ref array
 print_note "The array variable 'a' within the function must not have the same name as any variable in the global scope."
@@ -63,14 +63,14 @@ readarray -t array < <(create_array)
 print_array_ref array
 EOF
 function create_array {
-	local array=()
-	array+=('a b')
-	array+=('c*')
-	array+=('%d')
-	array+=('e.f')
-	for element in "${array[@]}"; do
-		echo "${element}"
-	done
+    local array=()
+    array+=('a b')
+    array+=('c*')
+    array+=('%d')
+    array+=('e.f')
+    for element in "${array[@]}"; do
+        echo "${element}"
+    done
 }
 unset array
 array=()
@@ -93,11 +93,11 @@ create_array_ref array
 print_array_ref array
 EOF
 function create_array_ref {
-	local -n a=$1
-	a+=('a b')
-	a+=('c*')
-	a+=('%d')
-	a+=('e.f')
+    local -n a=$1
+    a+=('a b')
+    a+=('c*')
+    a+=('%d')
+    a+=('e.f')
 }
 unset array
 array=()

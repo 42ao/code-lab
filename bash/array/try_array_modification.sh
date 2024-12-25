@@ -5,10 +5,10 @@
 . "${BASH_SOURCE%/*}"/../format/format.sh
 
 print_array() {
-	local -n a=$1
-	for element in "${a[@]}"; do
-		echo "${element}"
-	done
+    local -n a=$1
+    for element in "${a[@]}"; do
+        echo "${element}"
+    done
 }
 
 print_title "Define array"

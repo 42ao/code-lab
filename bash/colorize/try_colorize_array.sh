@@ -22,7 +22,7 @@ for element in "${array[@]}"; do
 done
 EOF
 for element in "${array[@]}"; do
-	colorize "${color}" "${element}"
+    colorize "${color}" "${element}"
 done
 
 print_title "Colorize array elements with '@'"

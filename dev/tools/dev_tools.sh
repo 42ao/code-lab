@@ -3,11 +3,11 @@
 # shellcheck disable=SC2034
 
 DEV_SNAP_PACKAGES=(
-  "just --edge --classic"
+    "just --edge --classic"
 )
 
 DEV_BREW_PACKAGES=(
-  "just"
+    "just"
 )
 
 DEV_PIP_PACKAGES=(
