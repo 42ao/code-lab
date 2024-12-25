@@ -11,7 +11,7 @@ remove_brew_packages() {
 		else
 			echo "Removing ${package}..."
 			# shellcheck disable=2086
-			brew remove ${package}
+			brew uninstall ${package}
 		fi
 	done
 }
