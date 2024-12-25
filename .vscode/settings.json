@@ -1,0 +1,6 @@
+{
+    // Allow external sources to be checked
+    "shellcheck.customArgs": [
+        "--external-sources"
+    ]
+}
