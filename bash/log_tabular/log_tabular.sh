@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-. "${BASH_SOURCE%/*}"/../colorize/colorize.sh
+. "${BASH_SOURCE%/*}/../colorize/colorize.sh"
 
 # LOG parameters
 
 LOG_LEVEL=${LOG_LEVEL:-INFO}
 LOG_COLORED=${LOG_COLORED:-true}
+LOG_DATE_FORMAT=${LOG_DATE_FORMAT:-"+%Y-%m-%dT%H:%M:%S.%3NZ"}
 
 # LOG constants
 
@@ -31,7 +32,7 @@ fi
 
 current_time() {
     local timestamp
-    timestamp=$(date --utc +%Y-%m-%dT%H:%M:%S.%3NZ)
+    timestamp=$(date -u "${LOG_DATE_FORMAT}")
     printf '%s' "${timestamp}"
 }
 
