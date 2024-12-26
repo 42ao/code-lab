@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-. "${BASH_SOURCE%/*}"/../colorize/colorize.sh
-
 # LOG parameters
 LOG_LEVEL=${LOG_LEVEL:-INFO}
-LOG_COLORED=${LOG_COLORED:-true}
 LOG_DATE_FORMAT=${LOG_DATE_FORMAT:-"+%Y-%m-%dT%H:%M:%S.%3NZ"}
 
 # LOG constants
@@ -17,20 +14,11 @@ if [[ -z ${LOG_LEVELS[*]} ]]; then
     )
 fi
 
-if [[ -z ${LOG_LEVEL_COLORS[*]} ]]; then
-    declare -A -r LOG_LEVEL_COLORS=(
-        [DEBUG]="BRIGHT_BLUE"
-        [INFO]="BRIGHT_GREEN"
-        [WARN]="BRIGHT_YELLOW"
-        [ERROR]="BRIGHT_RED"
-    )
-fi
-
 # LOG functions
 
 current_time() {
     local timestamp
-    timestamp=$(date --utc "${LOG_DATE_FORMAT}")
+    timestamp=$(date -u "${LOG_DATE_FORMAT}")
     printf '%s' "${timestamp}"
 }
 
@@ -48,30 +36,13 @@ log() (
             if [[ -n ${func} ]]; then
                 source="${source}:${func}"
             fi
-            if [[ ${LOG_COLORED} == true ]]; then
-                local level_color=${LOG_LEVEL_COLORS[${level}]}
-                timestamp=$(colorize "GRAY" "\"${timestamp}"\")
-                source=$(colorize "GRAY" "\"${source}"\")
-                level=$(colorize "${level_color}" \""${level}"\")
-                message=$(colorize "BRIGHT_WHITE" \""${message}"\")
-                printf "%s %s, %s %s, %s %s, %s %s%s\n" \
-                    "$(colorize "GRAY" '{"timestamp":')" \
-                    "${timestamp}" \
-                    "$(colorize "GRAY" '"source":')" \
-                    "${source}" \
-                    "$(colorize "GRAY" '"level":')" \
-                    "${level}" \
-                    "$(colorize "GRAY" '"message":')" \
-                    "${message}" \
-                    "$(colorize "GRAY" "}")" || true
-            else
-                printf "%s %s, %s %s, %s %s, %s %s%s\n" \
-                    '"timestamp":' "\"${timestamp}\"" \
-                    '"source":' "\"${source}\"" \
-                    '"level":' "${level}" \
-                    '"message":' "\"${message}\"" \
-                    "}"
-            fi
+            printf "%s%s %s, %s %s, %s %s, %s %s%s\n" \
+                "{" \
+                '"timestamp":' "\"${timestamp}\"" \
+                '"source":' "\"${source}\"" \
+                '"level":' "${level}" \
+                '"message":' "\"${message}\"" \
+                "}"
         fi
     }
     log_message_structured "$@"
