@@ -8,6 +8,11 @@
 
 ## Tools
 
+The tools listed below can be installed using the [tools management script](../docs/tools_management_script.md) by
+```sh
+<repo_dir>/tools.sh setup bash
+```
+
 ### shellcheck
 
 |         |                                        |
@@ -27,7 +32,6 @@ set -x as default argument
 | source | https://github.com/mvdan/sh                    |
 | docs   | https://pkg.go.dev/mvdan.cc/sh/v3#readme-shfmt |
 
-
 ## Collections
 https://github.com/topics/shell
 https://github.com/topics/bash
@@ -38,9 +42,6 @@ https://github.com/dylanaraps/pure-sh-bible
 https://github.com/alebcay/awesome-shell
 https://github.com/ibraheemdev/modern-unix
 https://github.com/awesome-lists/awesome-bash
-
-## Linter
-https://github.com/koalaman/shellcheck
 
 ## Customization
 https://github.com/starship/starship
@@ -54,3 +55,19 @@ https://github.com/gruntwork-io/bash-commons
 ## Cheatsheets
 https://github.com/tldr-pages/tldr
 https://github.com/chubin/cheat.sh
+
+## Setup
+
+See also [Bash setup on macOS](../docs/setup_on_macos.md)
+
+## Shebang
+
+In order to use the latest version of bash which is configured in PATH, prefer to use the shebang
+```sh
+#!/usr/bin/env bash
+```
+instead of
+```sh
+#!/bin/bash
+```
+which may refer to an older Bash version, e.g., on mac systems.

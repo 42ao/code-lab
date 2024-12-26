@@ -2,6 +2,11 @@
 
 ## Tools
 
+The tools listed below can be installed using the [tools management script](../docs/tools_management_script.md) by
+```sh
+<repo_dir>/tools.sh setup dev
+```
+
 ### just
 
 |         |                               |
