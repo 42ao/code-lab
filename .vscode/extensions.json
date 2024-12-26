@@ -9,10 +9,11 @@
 		"mkhl.shfmt",
 		"ms-python.python",
 		"nefrob.vscode-just-syntax",
-		"timonwong.shellcheck"
+		"timonwong.shellcheck",
+        "yzhang.markdown-all-in-one"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
-		
+
 	]
 }
