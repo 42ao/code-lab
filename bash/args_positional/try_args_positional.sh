@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC2016,SC2119
-
 . "${BASH_SOURCE%/*}"/../format/format.sh
 
 print_source "${BASH_SOURCE%/*}"/args_positional.sh

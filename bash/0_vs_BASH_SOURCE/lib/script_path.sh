@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC2312
-
 . "${BASH_SOURCE%/*}"/../../format/format.sh
 
 print_bof "script_path.sh"

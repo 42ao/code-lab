@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC2119
-
 . "${BASH_SOURCE%/*}"/../ansi/ansi.sh
 
 COLOR_SECTION=${COLOR_SECTION:-GREEN}

@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC2086,SC2155
-
 . "${BASH_SOURCE%/*}"/../ansi/ansi.sh
 
 colorize() {

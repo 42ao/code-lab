@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC2119
-
 . "${BASH_SOURCE%/*}"/../format/format.sh
 
 print_array() {

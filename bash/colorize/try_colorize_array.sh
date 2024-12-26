@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# shellcheck disable=SC2016,SC2119
+# shellcheck disable=SC2016
 
 . "${BASH_SOURCE%/*}"/../format/format.sh
 . "${BASH_SOURCE%/*}"/colorize.sh
