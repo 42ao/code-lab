@@ -68,6 +68,6 @@ In order to use the latest version of bash which is configured in PATH, prefer t
 ```
 instead of
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 ```
 which may refer to an older Bash version, e.g., on mac systems.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 required=${1}
 default_empty=${2:-}

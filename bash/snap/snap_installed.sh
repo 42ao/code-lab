@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 snap_installed() {
     local package=$1

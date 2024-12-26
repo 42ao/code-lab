@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 . "${BASH_SOURCE%/*}"/bash_tools.sh
 . "${BASH_SOURCE%/*}"/../snap/remove_snap_packages.sh

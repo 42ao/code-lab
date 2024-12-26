@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 install_snap_via_apt() {
     if ! command -v snap &>/dev/null; then

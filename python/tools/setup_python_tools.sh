@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 . "${BASH_SOURCE%/*}"/python_tools.sh
 . "${BASH_SOURCE%/*}"/../../bash/brew/install_brew_packages.sh

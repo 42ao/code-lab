@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 . "${BASH_SOURCE%/*}"/dev_tools.sh
 . "${BASH_SOURCE%/*}"/../../bash/snap/install_snap.sh

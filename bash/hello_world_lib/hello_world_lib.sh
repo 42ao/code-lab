@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 hello_world() {
     local greeting="${*:-world}"

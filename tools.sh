@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 . "${BASH_SOURCE%/*}"/bash/tools/setup_tools.sh
 . "${BASH_SOURCE%/*}"/bash/tools/remove_tools.sh

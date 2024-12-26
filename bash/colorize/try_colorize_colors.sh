@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 . "${BASH_SOURCE%/*}"/../format/format.sh
 . "${BASH_SOURCE%/*}"/colorize.sh

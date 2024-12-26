@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 . "${BASH_SOURCE%/*}"/../os/get_os.sh
 . "${BASH_SOURCE%/*}"/setup_bash_tools.sh
