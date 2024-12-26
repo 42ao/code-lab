@@ -9,7 +9,7 @@ help:
 
 # setup development tools
 setup:
-    ../setup_tools.sh bash
+    ../tools.sh setup bash
 
 # lint shell files
 lint:
