@@ -9,8 +9,8 @@ print_arg() {
 	local arg_name=$2
 	shift 2
 	local arg_value=$*
-	arg_ref=$(colorize "BRIGHT_GREEN" "${arg_ref}")
-	arg_name=$(colorize "GRAY" "${arg_name}")
+	arg_ref=$(format "BRIGHT_GREEN" "${arg_ref}")
+	arg_name=$(format "GRAY" "${arg_name}")
 	echo "${arg_ref}" "${arg_name}" "${arg_value}"
 }
 

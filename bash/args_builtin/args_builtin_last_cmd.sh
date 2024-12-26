@@ -7,4 +7,4 @@
 print_arg '$?' "Last command exist status:" "$?"
 print_arg '$!' "Last command process id  :" "$!"
 
-# TODO The $! does not provide the process id of the last command
+print_note "TODO The \$! does not provide the process id of the last command"
