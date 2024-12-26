@@ -17,19 +17,20 @@ help:
     just --unsorted --list
 
 # setup everything
-setup: wipe setup_dev setup_venv setup_package
+setup: wipe setup_dev_tools setup_venv setup_dev_requirements setup_package
 
 # install development tools
-setup_dev:
-    @echo "Install python tools in system Python"
-    ../setup_tools.sh python
-
-    @echo "Install development requirements in system Python"
-    {{ system_pip }} install --user -r ./requirements-dev.txt
+setup_dev_tools:
+    @echo "Install Python tools"
+    ../tools.sh setup python
 
 # setup virtual environment
 setup_venv:
     [ -d {{ venv_dir }} ] || echo "Setup venv"; {{ system_python }} -m venv {{ venv_dir }}
+
+setup_dev_requirements:
+    @echo "Install development requirements in virtual environment"
+    {{ pip }} install -r ./requirements-dev.txt
 
 # install package
 setup_package:
