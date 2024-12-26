@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2119
 
-. "${BASH_SOURCE%/*}"/ansi.sh
+. "${BASH_SOURCE%/*}"/../ansi/ansi.sh
 
 COLOR_SECTION=${COLOR_SECTION:-GREEN}
 COLOR_TITLE=${COLOR_TITLE:-BRIGHT_GREEN}
