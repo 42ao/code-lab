@@ -1,5 +1,7 @@
 #!../.venv/bin/python
 
+# ruff: noqa: E501
+
 import subprocess
 
 from format.format import Code, Note, Section, Source, Title
@@ -25,7 +27,7 @@ print(Code('subprocess.call(["./hello_world.py", "first", "and", "last", "name"]
 subprocess.call(["./hello_world.py", "first", "and", "last", "name"])
 
 print(Section("execute script via command line interpreter from subprocess call"))
-print(Code(f'subprocess.call([{python}, "./SCRIPT.py", "ARGS"])'))	
+print(Code(f'subprocess.call([{python}, "./SCRIPT.py", "ARGS"])'))
 
 print(Title("without arguments"))
 print(Code(f'subprocess.call([{python}, "./hello_world.py"])'))
