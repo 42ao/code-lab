@@ -4,7 +4,7 @@
 
 . "${BASH_SOURCE%/*}"/../../bash/format/format.sh
 
-python="/bin/python3"
+python="/usr/bin/env python3"
 print_title "Use ${python}"
 
 print_source "${BASH_SOURCE%/*}"/hello_world.py
