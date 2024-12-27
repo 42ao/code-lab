@@ -9,8 +9,8 @@ system_pip := "pip3"
 system_python := "python3"
 
 venv_dir := ".venv"
-pip := venv_dir + "/bin/pip"
-python := venv_dir + "/bin/python"
+pip := venv_dir + "/usr/bin/env pip3"
+python := venv_dir + "/usr/bin/env python3"
 
 # show all recipies
 help:
@@ -39,11 +39,11 @@ setup_package:
 
 # lint Python files
 lint:
-    ruff check
+    ruff check .
 
 # format Python files
 format:
-    ruff format
+    ruff format .
 
 # build package
 build:
