@@ -35,10 +35,10 @@ def hello_world(greetings: list[str]) -> None:
         None
 
     Examples:
-        >>> hello_world([])
+        $ hello_world([])
         Hello, world!
 
-        >>> hello_world(["to", "the", "universe"])
+        $ hello_world(["to", "the", "universe"])
         Hello, to the universe!
     """
     greetings = greetings if len(greetings) else ["world"]
@@ -59,10 +59,10 @@ def main() -> None:
         None
 
     Examples:
-        >>> main()
+        $ main()
         Hello, world!
 
-        >>> main(["to", "the", "universe"])
+        $ main(["to", "the", "universe"])
         Hello, to the universe!
     """
     exit_code = hello_world(sys.argv[1:])
