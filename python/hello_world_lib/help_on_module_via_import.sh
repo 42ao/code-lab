@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 python3 -c "import hello_world_lib; help(hello_world_lib)"
