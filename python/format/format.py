@@ -90,7 +90,7 @@ class Note:
     set, it defaults to the default color.
     """
     __env_key_color: str = "COLOR_NOTE"
-    color: ANSI = ANSI.DEFAULT
+    color: ANSI = ANSI.BRIGHT_YELLOW
 
     def __init__(self, note: str) -> None:
         self.note = note
