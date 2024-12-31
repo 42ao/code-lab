@@ -9,8 +9,8 @@ system_pip := "pip3"
 system_python := "python3"
 
 venv_dir := ".venv"
-pip := venv_dir + "/usr/bin/env pip3"
-python := venv_dir + "/usr/bin/env python3"
+pip := venv_dir + "/bin/pip3"
+python := venv_dir + "/bin/python3"
 
 # show all recipies
 help:
