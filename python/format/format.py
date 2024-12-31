@@ -1,6 +1,6 @@
 import os
 
-from format.ansi import ANSI, to_ansi
+from ansi.ansi import ANSI, to_ansi
 
 
 def format(fmt: ANSI, text: str) -> str:
