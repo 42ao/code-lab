@@ -1,5 +1,5 @@
 import pytest
-from .format import to_ansi, ANSI
+from ansi.ansi import to_ansi, ANSI
 
 
 def test_to_ansi_returns_ansi_instance_for_ansi_instance():
