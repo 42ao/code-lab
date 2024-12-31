@@ -5,3 +5,7 @@
 DEV_SNAP_PACKAGES=(
   "just --edge --classic"
 )
+
+DEV_PIP_PACKAGES=(
+  "pre-commit"
+)
